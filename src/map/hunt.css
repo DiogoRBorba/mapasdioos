@@ -1,0 +1,68 @@
+/* Image-only grading keeps the map geometry and all pin coordinates unchanged. */
+.map-render-filters { position: absolute; pointer-events: none; }
+.map-canvas .leaflet-image-layer { image-rendering: auto; }
+.period-morning .leaflet-image-layer { filter: url('#map-detail') brightness(1.22) contrast(1.07) saturate(.94); }
+.period-afternoon .leaflet-image-layer { filter: url('#map-detail') brightness(1.04) contrast(1.05) sepia(.27) saturate(1.2); }
+.period-night .leaflet-image-layer { filter: url('#map-night') brightness(.9) contrast(1.12) saturate(.78); }
+.period-morning, .period-morning .map-canvas.leaflet-container { background: #232925; }
+.period-afternoon, .period-afternoon .map-canvas.leaflet-container { background: #25251d; }
+.period-night, .period-night .map-canvas.leaflet-container { background: #101820; }
+.map-atmosphere { position: absolute; pointer-events: none; }
+.map-appearance-controls { position: absolute; bottom: 22px; right: 23px; z-index: 900; display: flex; gap: 3px; padding: 4px; border-radius: 5px; border: 1px solid #c4ae7933; background: #151a16e8; }
+.map-appearance-controls button[aria-pressed='true'] { color: #ead2a0; background: #c4ae7911; }
+@media (max-width: 760px) { .map-appearance-controls { bottom: 45px; right: 12px; } }
+.hunt-clock { position: absolute; top: 24px; right: 23px; z-index: 1010; width: 310px; max-width: calc(100% - 32px); }
+.hunt-status { display: flex; align-items: center; gap: 15px; padding: 16px 18px; background: #171916f5; border: 1px solid #c4ae7966; border-radius: 5px; box-shadow: 0 7px 26px #0005; }
+.hunt-period-icon { display: grid; place-items: center; width: 37px; height: 37px; flex-shrink: 0; border-radius: 50%; background: #d6bb7b13; color: #e6cc8e; }
+.hunt-eyebrow { display: block; font-size: 7px; letter-spacing: 2px; color: #b7a685; margin-bottom: 7px; }
+.hunt-status-text { min-width: 0; flex: 1; }
+.hunt-status strong { display: block; font-family: var(--serif); color: #f2e8d0; font-size: 25px; line-height: 1.15; font-weight: 500; overflow-wrap: anywhere; }
+.hunt-separator { margin: 0 9px; color: #9d896256; }
+.hunt-edit-button { background: #e3ca9810; color: #cfbd98; width: 31px; height: 33px; display: grid; place-items: center; border-radius: 3px; border: 1px solid #c4ae7926; flex-shrink: 0; }
+.hunt-edit-button:hover { background: #e3ca9825; color: #fff0d0; }
+.hunt-refresh-button { display:flex; align-items:center; justify-content:center; gap:8px; width:100%; margin-top:7px; padding:10px 12px; border:1px solid #c4ae7945; border-radius:4px; background:#171916ed; color:#d7c7a8; font-size:10px; }
+.hunt-refresh-button:hover:not(:disabled) { background:#292c24; border-color:#c4ae7980; }
+.period-night .hunt-refresh-button { background:#141c26ed; color:#c7d6e5; border-color:#9baec045; }
+.period-night .hunt-status { background: #141c26f5; border-color: #9baec05c; }
+.period-night .hunt-period-icon { color: #cadbed; background: #b9d4ef12; }
+.period-night .hunt-status strong { color: #dce9f5; }
+.hunt-editor { margin-top: 10px; padding: 22px; border-radius: 5px; background: #171a17fc; border: 1px solid #c7b48b60; box-shadow: 0 14px 40px #0009; max-height: calc(100dvh - 220px); overflow-y: auto; scrollbar-width: thin; }
+.hunt-editor-heading { display: flex; align-items: flex-start; justify-content: space-between; gap: 12px; margin-bottom: 23px; }
+.hunt-editor-heading h2 { font-family: var(--serif); font-size: 28px; font-weight: 400; }
+.hunt-editor fieldset { border: 0; padding: 0; margin: 0; min-width: 0; }
+.hunt-editor label, .hunt-period-options legend { font-size: 11px; color: #c9c0b0; }
+.hunt-editor input[type='number'] { margin-top: 9px; width: 100%; padding: 11px 13px; border-radius: 3px; background: #0d100d; color: #eee3ce; border: 1px solid #c7b48b44; font: inherit; font-size: 16px; color-scheme: dark; }
+.hunt-editor .hunt-period-options { margin-top: 22px; display: flex; gap: 6px; }
+.hunt-period-options legend { margin-bottom: 10px; }
+.hunt-period-options label { position: relative; display: flex; flex: 1; flex-direction: column; align-items: center; gap: 8px; padding: 13px 5px; border: 1px solid #ffffff1a; border-radius: 4px; cursor: pointer; color: #a69e90; }
+.hunt-period-options input { position: absolute; opacity: 0; width: 1px; height: 1px; }
+.hunt-period-options label:has(input:focus-visible) { outline: 2px solid #d6bd8e; outline-offset: 3px; }
+.hunt-period-options .is-selected { border-color: #d6bd8e99; background: #d6bd8e13; color: #f0d8aa; }
+.hunt-approval-note { margin: 18px 0; color: #aaa191; font-size: 10px; line-height: 1.8; }
+.hunt-editor .button { display: flex; justify-content: center; gap: 9px; width: 100%; margin-top: 16px; padding: 13px 9px; font-size: 11px; }
+.hunt-cancel { display: block; width: 100%; padding: 12px 0 0; color: #afa38e; background: none; font-size: 10px; }
+.hunt-sync-error, .hunt-published { margin-top: 8px; padding: 11px 13px; border-radius: 4px; border: 1px solid #c4ae793b; background: #141a17f5; color: #c1cab2; font-size: 10px; line-height: 1.6; }
+.hunt-published { display: flex; gap: 8px; align-items: center; }
+.hunt-published svg { flex-shrink: 0; }
+.hunt-sync-error { color: #d9b99b; }
+.hunt-sync-error button { display: block; background: none; padding: 7px 0 0; font-size: 10px; color: #ecd6b5; text-decoration: underline; }
+.map-controls { top: 166px; }
+.pin-panel { top: 166px; max-height: calc(100% - 190px); }
+.placement-banner { top: auto; bottom: 55px; }
+@media (max-width: 1050px) {
+  .hunt-clock { top: 16px; right: 16px; width: 285px; }
+  .hunt-status { padding: 14px; gap: 12px; }
+  .hunt-status strong { font-size: 24px; }
+  .map-controls { top: 154px; }
+  .pin-panel { top: 154px; max-height: calc(100% - 170px); }
+}
+@media (max-width: 960px) { .map-location-label { display: none; } .reopen-filters { top: 16px; } }
+@media (max-width: 760px) {
+  .hunt-clock { top: 12px; right: 12px; width: 280px; max-width: calc(100% - 24px); }
+  .hunt-status strong { font-size: 24px; }
+  .hunt-editor { max-height: calc(100dvh - 207px); padding: 20px; }
+  .map-controls, .reopen-filters { top: 150px; }
+  .pin-panel { top: 150px; max-height: calc(100% - 162px); }
+  .pin-details { top: auto; max-height: 55%; }
+  .pin-editor { bottom: 12px; }
+}

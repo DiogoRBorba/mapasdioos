@@ -1,0 +1,122 @@
+/* Dioos RPG identity: the original logo, charcoal, ivory and restrained gold. */
+:root { color: #e8e6e1; background: #101010; --muted: #999792; --gold: #c6b79d; --line: #ffffff16; }
+body { background: radial-gradient(ellipse at 75% 10%, #bdb8a608, transparent 42%), #101010; }
+.dioos-logo { display: block; object-fit: contain; mix-blend-mode: screen; }
+.brand { gap: 14px; }
+.header-logo { width: 58px; height: 58px; }
+.brand > span { font-family: 'Inter', sans-serif; font-size: 18px; font-weight: 650; letter-spacing: 1px; }
+.brand-accent { color: #a9a8a4; font-weight: 350; }
+.brand small { font-size: 7px; letter-spacing: 2.5px; margin-top: 9px; font-weight: 400; }
+.header-caption { font-size: 8px; letter-spacing: 2px; color: #8e8c86; }
+.header-inner nav .nav-active { color: #edeae4; }
+.nav-active:after { background: #e3dfd5; }
+.hero { padding-top: 58px; padding-bottom: 45px; }
+.hero h1 { font-size: clamp(48px, 4.5vw, 65px); }
+.hero h1 em { color: #c5c0b5; }
+.hero .eyebrow { color: #b9b3a6; }
+.hero-description { color: #a29f99; }
+.hero-compass { color: #fff; opacity: .8; }
+.hero-compass:before, .hero-compass:after { border-color: #ffffff26; }
+.hero-compass .compass-north, .hero-compass .compass-coordinate { color: #fff; }
+.hero-index { color: #77736c; }
+.hero-link { color: #d5d1c9; }
+.search-field { color: #92908a; }
+.search-field input { color: #e3e1dc; }
+.search-field input::placeholder { color: #97938d; }
+.collection-meta { color: #a29c93; align-items: center; padding: 14px 0; }
+.carousel-top-controls { display: flex; align-items: center; gap: 8px; }
+.carousel-top-controls > span { margin-right: 12px; font-size: 10px; letter-spacing: .2px; color: #9b9790; }
+.carousel-arrow { display: grid; place-items: center; width: 34px; height: 34px; border: 1px solid #ffffff20; border-radius: 50%; color: #d0cbc2; background: transparent; transition: background .2s; }
+.carousel-arrow:hover:not(:disabled) { background: #ffffff0d; border-color: #ffffff40; }
+.carousel-arrow:disabled { cursor: default; opacity: .25; }
+.campaign-rail { --card-width: min(78%, 880px); position: relative; display: flex; gap: 20px; overflow-x: auto; overflow-y: hidden; scroll-snap-type: x mandatory; scrollbar-width: none; overscroll-behavior-x: contain; border-radius: 5px; }
+.campaign-rail::-webkit-scrollbar { display: none; }
+.campaign-rail:after { content: ''; flex: 0 0 calc(100% - var(--card-width) - 20px); }
+.campaign-rail:focus-visible { outline-offset: 6px; }
+.campaign-card { flex: 0 0 var(--card-width); min-width: 0; height: 440px; min-height: 440px; scroll-snap-align: start; border-color: #c7bb9f38; background: #161616; }
+.campaign-art { filter: none; object-position: 57% center; }
+.campaign-vignette { background: linear-gradient(90deg, #0a0909b8, #0a09094a 65%, #0a090919), linear-gradient(0deg, #090909f5 0%, #09090996 32%, transparent 77%); }
+.card-topline { padding: 24px 28px; }
+.campaign-number { color: #dfd6c4; }
+.access-badge { color: #e7dfd1; background: #0b0a0a8a; border-color: #ddd8bc40; }
+.card-content { padding: 24px 35px 27px; }
+.card-content h3 { font-size: clamp(44px, 4.1vw, 59px); line-height: 1; color: #f2eade; text-shadow: 0 2px 22px #0008; }
+.card-content h3 em { color: #dfc9a8; }
+.card-eyebrow { color: #d1c3ae; }
+.card-description { max-width: 275px; color: #d0c6b7; text-shadow: 0 1px 12px #000; }
+.button.primary { background: #e2dbce; color: #191714; border-color: #e8e0d1; }
+.button.primary:hover:not(:disabled) { background: #f5efe4; }
+.card-content .button { margin-top: 24px; background: #d5c1a1; border-color: #ddccb1; }
+.card-bottom { padding: 0 28px 18px; color: #c6bba9; }
+.card-bottom > span:first-child { font-size: 7px; letter-spacing: 2px; }
+.card-seal { font-family: 'Inter', sans-serif; font-size: 9px; letter-spacing: 2px; color: #c6bba9; }
+.placeholder-card { display: flex; align-items: center; justify-content: center; background: #151515; border: 1px solid #ffffff17; }
+.placeholder-card h3 { font-family: var(--serif); font-size: 39px; font-weight: 400; color: #aaa59b; text-align: center; padding: 20px; }
+.carousel-bottom { margin-top: 15px; display: flex; justify-content: space-between; align-items: center; gap: 20px; min-height: 36px; }
+.carousel-hint { display: flex; align-items: center; gap: 10px; font-size: 9px; color: #969087; }
+.carousel-pagination { display: flex; align-items: center; gap: 10px; }
+.carousel-pagination button { display: flex; flex-direction: column; align-items: center; gap: 8px; background: none; color: #858078; font-size: 8px; padding: 8px 5px; min-width: 30px; }
+.carousel-pagination button > span { width: 20px; height: 2px; background: #ffffff22; transition: width .25s, background .25s; }
+.carousel-pagination button[aria-current='true'] { color: #ebe2d2; }
+.carousel-pagination button[aria-current='true'] > span { background: #d0bea0; width: 36px; }
+.carousel-pagination button:hover > span { background: #c9c3b6; }
+.empty-search { margin-top: 25px; }
+.atlas-note { margin-top: 32px; }
+.atlas-note p, .site-footer { color: #99958d; }
+.site-footer > div > .footer-wordmark { font-family: 'Inter', sans-serif; color: #cac7c1; font-size: 10px; letter-spacing: 2px; font-weight: 600; }
+.access-dialog { background: #181818; border-color: #bca57245; }
+.access-dialog::backdrop { background: #060606ce; }
+.access-dialog #access-description { color: #aaa59c; }
+.access-dialog label { color: #cfcac0; }
+.access-dialog form { margin-top: 23px; }
+.role-selector { display: flex; gap: 8px; border: 0; margin: 0; padding: 0; }
+.access-dialog .role-option { position: relative; display: flex; align-items: center; justify-content: center; gap: 8px; padding: 13px 9px; flex: 1; border: 1px solid #ffffff20; border-radius: 3px; cursor: pointer; margin: 0; font-size: 11px; color: #aaa59b; }
+.role-option input { position: absolute; width: 1px; height: 1px; opacity: 0; }
+.role-option:has(input:focus-visible) { outline: 2px solid var(--gold); outline-offset: 3px; }
+.access-dialog .role-option.selected { color: #e9e0d0; border-color: #c6b79d80; background: #c6b79d0a; }
+.role-description { min-height: 34px; font-size: 10px; line-height: 1.7; color: #aba397; margin: 12px 0 22px; }
+.password-field { color: #a29c90; }
+.password-field input { color: #e9e4db; }
+.password-field input::placeholder, .dialog-note { color: #969085; }
+.guide-steps p { color: #aca59b; }
+.access-result { min-height: 100dvh; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 32px 20px; gap: 30px; }
+.access-result h1 { font-family: var(--serif); font-weight: 400; font-size: clamp(35px, 5vw, 62px); }
+.room-logo { width: 100px; height: 100px; margin: 35px 0 15px; }
+.campaign-room { justify-content: center; gap: 20px; }
+.campaign-room h1 { max-width: 660px; }
+@media (max-width: 1000px) {
+  .card-content h3 { font-size: 49px; }
+  .card-content { padding: 25px 28px 25px; }
+}
+@media (max-width: 700px) {
+  .header-logo { width: 45px; height: 45px; }
+  .brand { gap: 7px; }
+  .brand > span { font-size: 14px; letter-spacing: .3px; }
+  .brand small { font-size: 6px; letter-spacing: 1.7px; }
+  .hero { padding-top: 42px; padding-bottom: 30px; }
+  .hero h1 { font-size: 47px; }
+  .campaign-rail { --card-width: 91%; gap: 12px; }
+  .campaign-rail:after { flex-basis: calc(100% - var(--card-width) - 12px); }
+  .campaign-card { height: 480px; min-height: 480px; }
+  .card-topline { padding: 18px 16px; }
+  .campaign-art { object-position: 51% center; }
+  .campaign-vignette { background: linear-gradient(0deg, #0b0909f5 0%, #0b0909a8 40%, #0b090918 80%); }
+  .card-content { padding: 65px 22px 27px; }
+  .card-content h3 { font-size: clamp(38px, 10vw, 47px); margin-top: 16px; }
+  .card-eyebrow { font-size: 6px; letter-spacing: 1.2px; }
+  .card-description { max-width: 240px; }
+  .card-content .button { gap: 20px; padding: 13px 17px; }
+  .card-bottom { padding: 0 20px 20px; }
+  .card-bottom > span:first-child { font-size: 6px; letter-spacing: 1.2px; }
+  .card-seal { font-size: 8px; }
+  .placeholder-card h3 { font-size: 34px; }
+  .carousel-top-controls > span { display: none; }
+  .carousel-arrow { width: 34px; height: 34px; }
+  .carousel-bottom { justify-content: center; margin-top: 12px; }
+  .carousel-hint { display: none; }
+  .carousel-pagination { gap: 12px; }
+  .carousel-pagination button { padding: 10px 7px; }
+  .atlas-note { margin-top: 24px; }
+  .access-dialog { padding: 32px 24px; }
+  .access-dialog .role-option { font-size: 10px; gap: 6px; }
+}

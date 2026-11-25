@@ -1,0 +1,27 @@
+.map-page-picker {display:grid;gap:9px;margin-bottom:19px;padding-bottom:20px;border-bottom:1px solid #ffffff14}
+.map-page-picker label {font-size:8px;letter-spacing:1.5px;color:#b9ab92;text-transform:uppercase}
+.map-page-picker select,.map-pages-dialog input:not([type=file]):not([type=checkbox]),.map-pages-dialog textarea {width:100%;min-width:0;padding:11px;background:#101110;border:1px solid #a3906a44;border-radius:3px;color:#e5e1d9;font:inherit;font-size:12px}
+.map-page-picker button {justify-content:center;font-size:10px;min-height:36px}
+.map-page-home {position:absolute;top:20px;left:22px;z-index:700;background:#161715ee!important;color:#e6dcc9!important;border:1px solid #a48d6259!important;box-shadow:0 3px 16px #0004;max-width:calc(100% - 235px);font-size:11px;gap:8px;padding:11px 14px!important}
+.map-pages-dialog {width:min(560px,calc(100vw - 28px));max-height:90dvh;overflow-y:auto}
+.map-pages-dialog h2 {font-size:42px;margin-bottom:20px}
+.map-pages-dialog fieldset {display:grid;gap:10px;border:0;padding:20px 0}
+.map-pages-dialog fieldset>label:not(.page-image-upload) {font-size:12px;color:#d3c7b3}
+.map-pages-intro {font-size:13px;line-height:1.8;color:#b9b2a3;margin-bottom:22px}
+.map-pages-list {list-style:none;padding:0;margin:20px 0;display:grid;gap:10px}
+.map-pages-list li {display:flex;gap:13px;align-items:center;padding:14px;border:1px solid #a3906a33;color:#d6bd8e}
+.map-pages-list li>span {display:grid;gap:6px;flex:1;min-width:0}
+.map-pages-list strong {font-size:13px;color:#e5e1d9;overflow-wrap:anywhere}
+.map-pages-list small,.map-pages-notice {font-size:11px;line-height:1.7;color:#bdb6a6}
+.map-pages-notice {padding:12px 0;color:#b0ceb8}
+.page-image-upload {display:grid;justify-items:center;gap:10px;padding:22px 15px;border:1px dashed #c2a97a77;background:#c2a97a06;text-align:center;color:#d6bd8e;margin-top:12px}
+.page-image-upload strong {font-size:13px;overflow-wrap:anywhere;max-width:100%}
+.page-image-upload span {font-size:10px;color:#bdb6a6}
+.page-image-upload input {max-width:100%;font-size:11px}
+.page-replace-confirm {display:flex;gap:10px;line-height:1.6;align-items:flex-start}
+.atlas-map-page {cursor:pointer;stroke-dasharray:7 5}
+.map-stage.has-map-page .reopen-filters {top:100px}
+.map-stage.has-map-page .map-location-label {top:75px}
+.pin-page-enter {margin-top:18px}
+@media(max-width:760px){.map-page-home {top:14px;left:12px;max-width:calc(100% - 180px);font-size:10px;padding:9px!important}.map-pages-dialog h2{font-size:34px}}
+@media(max-width:480px){.map-stage.has-map-page .hunt-clock{top:58px}.map-stage.has-map-page .map-controls,.map-stage.has-map-page .reopen-filters{top:194px}}

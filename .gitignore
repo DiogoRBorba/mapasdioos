@@ -1,0 +1,18 @@
+node_modules/
+dist/
+.env
+.env.*
+!.env.example
+.vercel/
+*.tsbuildinfo
+tmp/
+.data/
+# Capturas e registros operacionais podem conter dados das mesas.
+docs/previews/
+docs/publicacao.md
+docs/art-direction.md
+scripts/check-*-live.mjs
+scripts/enable-strixhaven-social.mjs
+# Credenciais locais nunca entram no repositório; mantenha o modelo vazio.
+*.pem
+*.key

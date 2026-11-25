@@ -1,0 +1,18 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "framework": "vite",
+  "buildCommand": "npm run build",
+  "outputDirectory": "dist",
+  "crons": [{ "path": "/api/feed?action=cleanup", "schedule": "0 8 * * *" }],
+  "functions": { "api/map-image.js": { "includeFiles": "private/maps/**" } },
+  "rewrites": [{ "source": "/campanhas/:path*", "destination": "/index.html" }, { "source": "/noticias", "destination": "/index.html" }, { "source": "/noticias/:path*", "destination": "/index.html" }],
+  "headers": [{
+    "source": "/(.*)",
+    "headers": [
+      { "key": "X-Content-Type-Options", "value": "nosniff" },
+      { "key": "Referrer-Policy", "value": "strict-origin-when-cross-origin" },
+      { "key": "X-Frame-Options", "value": "DENY" },
+      { "key": "Content-Security-Policy", "value": "default-src 'self'; img-src 'self' data:; style-src 'self'; script-src 'self'; font-src 'self'; connect-src 'self'; frame-ancestors 'none'; base-uri 'self'; form-action 'self'" }
+    ]
+  }]
+}
